@@ -1,0 +1,88 @@
+main{
+    .textoBase{
+        background: linear-gradient(rgba(5,7,12,0.75),rgba(5,7,12,0.75)), url("/img/fondo1.jpg");
+        background-size: cover;
+        margin: 20px;
+        div{
+            justify-content: center;
+            .quienesSomos{
+                h3{
+                    @include h3();
+                }
+                @keyframes un_efecto {
+                    0%{color: white;}
+                    25%{color: orange;}
+                    50%{color:peru;}
+                    75%{color:orangered}
+                }
+                p{
+                    @include p();
+                }
+            }
+            .mision{
+                h3{
+                    @include h3();
+                }
+                p{
+                    @include p();
+                }
+            }
+            .vision{
+                h3{
+                    @include h3();
+                }
+                p{
+                    @include p();
+                }
+            }
+        }
+    }
+    .tablaDeHorarios{
+        grid-area: tablaDeHorarios;
+        line-height: 1.6;
+        letter-spacing: 5px;
+        word-spacing: 10px;
+        font-size: 75%;
+        overflow: scroll;
+        h3{
+            @include h3();
+        }
+        div{
+            .table{
+                padding:5px;
+                .fila{
+                    color:$color-titulos;
+                }
+            }
+        }
+    }
+    .diasHorarios{
+        .dias{
+            display: flex;
+            flex-direction:row;
+            justify-content: center;
+            .apertura{
+                margin: 20px;
+                background-color:darkslategray;
+                width: 30%;
+                border-radius: 20%;
+                height: auto;
+                box-shadow: 5px 5px 20px white;
+                h3{
+                    font-size: 100%;
+                    margin: 5px;
+                    padding: 5px;
+                    text-align: center;
+                    color:$color-titulos;
+                }
+                p{
+                    font-size: 75%;
+                    margin: 5px;
+                    padding: 5px;
+                    text-align: center;
+                    color:$color-titulos;
+                }
+            }
+        }
+    }
+}
